@@ -1,5 +1,5 @@
 import FileAdder from "./FileAdder";
-function App(){
+function App(){ //Takes care of FileAdder
     return(
         <FileAdder></FileAdder>
     )
