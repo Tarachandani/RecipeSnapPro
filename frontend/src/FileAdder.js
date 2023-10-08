@@ -25,11 +25,11 @@ function FileAdder(){
     }
 
     return(
-        <div>
+        <div style={{backgroundColor: 'orange', display: 'flex',  justifyContent:'center', alignItems:'center'}}>
             Please add your image here:
             <br></br>
-            <form id="uploadForm" onSubmit={handleSubmit}>
-                <input id="myFiles" type="file" accept="image/*"></input>
+            <form id="uploadForm" onSubmit={handleSubmit} >
+                <input id="myFiles" type="file" accept="image/*" ></input>
                 <br></br>
                 <button>Submit!</button>
                 {describe}
