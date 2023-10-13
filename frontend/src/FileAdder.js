@@ -1,6 +1,6 @@
 import {useState} from 'react';
 import axios from 'axios';
-function FileAdder(){
+function FileAdder(){ //added functionality for more use cases 
     const [describe, setDescribe] = useState('');
     const sendFiles = async ()=>{
         const myFiles = document.getElementById('myFiles').files;
