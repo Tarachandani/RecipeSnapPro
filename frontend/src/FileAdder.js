@@ -26,7 +26,7 @@ function FileAdder(){
 
     return(
         <div>
-            Please add your image here:
+            Please lay out your ingredients (like shown above):
             <br></br>
             <form id="uploadForm" onSubmit={handleSubmit}>
                 <input id="myFiles" type="file" accept="image/*"></input>
