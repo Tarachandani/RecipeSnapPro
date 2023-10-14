@@ -1,6 +1,6 @@
 import {useState} from 'react';
 import axios from 'axios';
-function FileAdder(){
+function FileAdder(){ //added functionality for more use cases 
     const [describe, setDescribe] = useState('');
     const sendFiles = async ()=>{
         const myFiles = document.getElementById('myFiles').files;
@@ -25,11 +25,11 @@ function FileAdder(){
     }
 
     return(
-        <div>
-            Please lay out your ingredients (like shown above):
+        <div style={{backgroundColor: 'orange', display: 'flex',  justifyContent:'center', alignItems:'center'}}>
+            Please add your image here:
             <br></br>
-            <form id="uploadForm" onSubmit={handleSubmit}>
-                <input id="myFiles" type="file" accept="image/*"></input>
+            <form id="uploadForm" onSubmit={handleSubmit} >
+                <input id="myFiles" type="file" accept="image/*" ></input>
                 <br></br>
                 <button>Submit!</button>
                 {describe}
