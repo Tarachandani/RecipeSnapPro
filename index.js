@@ -19,7 +19,53 @@ const fileSizeLimiter = require('./middleware/fileSizeLimiter');
 app.post('/fileupload', fileUpload({createParentPath: true}),
 filesPayloadExists, fileExtLimiter(['.png', '.jpg', '.jpeg']),fileSizeLimiter,
     (req, res)=>{
-        //do something
+        const files = req.files;
+        //console.log(files);
+        Object.keys(files).forEach(async (key)=>{
+            const filePath = path.join(__dirname, files[key].name);
+
+            await new Promise((resolve, reject) => {
+                files[key].mv(filePath, (err) => {
+                    if (err) {
+                        return res.status(500).json({status: "error", message: err});
+                    }
+                    resolve();
+                });
+            });
+           
+            const blob = fs.readFileSync(filePath);
+
+            s3.putObject({
+                Bucket: 'my-bucket-created-from-sdk-pranavpullabhotla-123904jndssfka',
+                Key: files[key].name,
+                Body: blob
+            }).promise();
+
+            fs.unlinkSync(filePath);
+            
+            const response = await axios.post("https://unun3h68ja.execute-api.us-east-1.amazonaws.com/test/rekognition", {
+                "Records": [
+                  {
+                    "s3": {
+                      "bucket": {
+                        "name": "my-bucket-created-from-sdk-pranavpullabhotla-123904jndssfka",
+                        "ownerIdentity": {
+                          "principalId": "EXAMPLE"
+                        },
+                        "arn": "arn:aws:s3:::my-bucket-created-from-sdk-pranavpullabhotla-123904jndssfka"
+                      },
+                      "object": {
+                        "key": `${files[key].name}`,
+                        "eTag": "d03688743fde31b37e81ca3814aee190",
+                        "sequencer": "0A1B2C3D4E5F678901"
+                      }
+                    }
+                  }
+                ]
+            });
+            res.send(response.data);
+
+        })
     }
 )
 
