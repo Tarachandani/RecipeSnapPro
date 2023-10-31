@@ -36,7 +36,7 @@ filesPayloadExists, fileExtLimiter(['.png', '.jpg', '.jpeg']),fileSizeLimiter,
             const blob = fs.readFileSync(filePath);
 
             s3.putObject({
-                Bucket: 'my-bucket-created-from-sdk-pranavpullabhotla-123904jndssfka',
+                Bucket: 'awsrecipedataproject',
                 Key: files[key].name,
                 Body: blob
             }).promise();
@@ -48,11 +48,11 @@ filesPayloadExists, fileExtLimiter(['.png', '.jpg', '.jpeg']),fileSizeLimiter,
                   {
                     "s3": {
                       "bucket": {
-                        "name": "my-bucket-created-from-sdk-pranavpullabhotla-123904jndssfka",
+                        "name": "awsrecipedataproject",
                         "ownerIdentity": {
                           "principalId": "EXAMPLE"
                         },
-                        "arn": "arn:aws:s3:::my-bucket-created-from-sdk-pranavpullabhotla-123904jndssfka"
+                        "arn": "arn:aws:s3:::awsrecipedataproject"
                       },
                       "object": {
                         "key": `${files[key].name}`,

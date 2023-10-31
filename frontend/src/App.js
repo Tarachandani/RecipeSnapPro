@@ -1,5 +1,6 @@
 import FileAdder from "./FileAdder";
 import FoodImage from './images/imageoffood.jpeg';
+import ListofThings from "./ListofThings";
 
 function App(){ //Takes care of FileAdder
     return(
@@ -10,6 +11,7 @@ function App(){ //Takes care of FileAdder
             <br></br>
             <text><text>Please lay out your ingredients (like shown above):</text></text>
             <FileAdder ></FileAdder>
+            <ListofThings></ListofThings>
         </div>
         
     )
