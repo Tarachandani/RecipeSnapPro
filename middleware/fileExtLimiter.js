@@ -1,5 +1,7 @@
 const path = require('path');
-
+let x = 7;
+let y = x;
+let z = x;
 const fileExtLimiter = (allowedExtArray)=>{
     return (req, res, next)=>{
         const files = req.files;

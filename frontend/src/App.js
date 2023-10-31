@@ -13,7 +13,6 @@ function App(){ //Takes care of FileAdder
             <FileAdder ></FileAdder>
             <ListofThings></ListofThings>
         </div>
-        
     )
 }
 
