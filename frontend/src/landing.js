@@ -40,7 +40,7 @@ const LandingPage = () => {
             </nav>
             <h1 style={titleStyles}>FridgeFood Finder</h1>
             <button style={buttonStyles} onClick={() => alert('Going to camera!')}>
-                Go to Camera
+                Open Camera
             </button>
         </div>
     );
