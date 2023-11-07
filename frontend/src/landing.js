@@ -27,7 +27,7 @@ const LandingPage = () => {
     };
 
     const buttonStyles = {
-        padding: '10px 20px',
+        padding: '15px 20px',
         fontSize: '16px',
         cursor: 'pointer',
     };
@@ -40,7 +40,7 @@ const LandingPage = () => {
             </nav>
             <h1 style={titleStyles}>FridgeFood Finder</h1>
             <button style={buttonStyles} onClick={() => alert('Going to camera!')}>
-                Open Camera
+                Camera
             </button>
         </div>
     );
