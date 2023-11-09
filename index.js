@@ -8,7 +8,15 @@ const fs = require('fs');
 const axios = require('axios')
 app.use(cors());
 app.use(bodyParser.json());
+const keys = require('./keys/keys');
 
+
+const AWS = require('aws-sdk');
+let s3= new AWS.S3({
+    region:'us-east-1',
+    accessKeyId: keys.accessKeyId,
+    secretAccessKey: keys.secretAccessKey
+});
 
 
 const filesPayloadExists = require('./middleware/FilesPayloadExists');

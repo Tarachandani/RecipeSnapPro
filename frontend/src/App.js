@@ -9,7 +9,7 @@ function App(){ //Takes care of FileAdder
             <h1>AI Recipe App</h1>
             <img src={FoodImage} alt="food on table"></img>
             <br></br>
-            <text><text>Please lay out your ingredients (like shown above):</text></text>
+            <text><text>Please lay out your ingredients (like shown above) and add your image:</text></text>
             <FileAdder ></FileAdder>
             <ListofThings></ListofThings>
         </div>

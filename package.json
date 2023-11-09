@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/Warel123-R/CS222-AIRecipe/issues"
   },
-  "homepage": "https://github.com/Warel123-R/CS222-AIRecipe#readme"
+  "homepage": "https://github.com/Warel123-R/CS222-AIRecipe#readme",
+  "dependencies": {
+    "aws-sdk": "^2.1492.0",
+    "axios": "^1.6.1",
+    "express-fileupload": "^1.4.2"
+  }
 }
