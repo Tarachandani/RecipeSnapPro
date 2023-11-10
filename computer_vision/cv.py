@@ -21,8 +21,16 @@ def is_target_item(class_id):
         # 'butter': ID_FOR_BUTTER,
         # 'bread': ID_FOR_BREAD
     }
-    return any(class_id == target_items[item] for item in target_items)
+    common_recipes = {
+        "fruit_salad": [53, 54, 55],  # Placeholder class IDs for fruits
+        # Add other recipes
+        # 'omelette': [ID_FOR_EGGS, ID_FOR_OTHER_INGREDIENTS],
+        # 'sandwich': [ID_FOR_BREAD, ID_FOR_OTHER_INGREDIENTS],
+    }
 
+    return any(class_id == target_items[item] for item in target_items) or any(
+        class_id in recipe_ids for recipe_ids in common_recipes.values()
+    )
 
 # Process the frame from the camera
 def process_frame(frame):
