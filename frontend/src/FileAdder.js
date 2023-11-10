@@ -9,6 +9,7 @@ function FileAdder(){ //added functionality for more use cases
             formData.append(myFiles.item(key).name, myFiles.item(key))
         })
         const res = await axios.post('http://localhost:5004/fileupload', formData);
+        console.log(res);
         const jsonStringWithDoubleQuotes = res.data.replace(/'/g, '"');
         const obj= JSON.parse(jsonStringWithDoubleQuotes);
 
