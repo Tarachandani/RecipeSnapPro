@@ -9,7 +9,7 @@ function RecipesList({ingredientlist}){
     
     //console.log(ingredientlist);
     const [ingredients, setIngredients]= useState('');
-    const [meals, setMeals] = useState('');
+    const [meals, setMeals] = useState([]);
 
     const GetMealList=async ()=>{
         
@@ -31,8 +31,9 @@ function RecipesList({ingredientlist}){
                         //console.log(meal.strMeal);
                         return <AllRecipeCards mealName={meal.strMeal} mealImage={meal.strMealThumb} link={meal.strMealThumb} id={meal.idMeal}></AllRecipeCards>
                     });
-                    //console.log(newone);
-                    setMeals(newone);
+                    console.log(meals);
+                    setMeals([...meals, ...newone])
+                    console.log(meals);
                 }
                 
             })
