@@ -37,11 +37,33 @@ function FileAdder(){ //added functionality for more use cases
         <div>
             <br></br>
             <form id="uploadForm" onSubmit={handleSubmit} >
-                <input className="hide_file" id="uploadForm" type="file" accept="image/*" ></input>
+                <input className="hide_file" id="myFiles" type="file" accept="image/*" ></input>
                 <button >Choose File</button>
                 <br></br>
                 <br></br>
-                <button >Submit!</button>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <button onSubmit={handleSubmit}>Submit!</button>
                 {describe}
             </form>
         <div>

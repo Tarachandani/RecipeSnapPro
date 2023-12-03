@@ -18,7 +18,7 @@ function ListofThings(){
     const answertoparam  = clicked ? <CardImage term={term}></CardImage> : <div></div>;
     return(
         <div>  
-            <h1>Generate Recipe:</h1>
+            <h1>Recipe Inspiration:</h1>
             <form onSubmit={handleSubmit}>
                 <input className="rounded" onChange={handleChange}></input>
                 <button className="button-27" onClick={handleSubmit}>Generate</button>
