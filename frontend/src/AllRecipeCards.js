@@ -21,6 +21,7 @@ function AllRecipeCards({mealName, mealImage, link, id}){
         <h2>{mealName}</h2>
         <img src={mealImage}></img>
         {instructions}
+        <button>Click me!</button>
     </div>
 
 }

@@ -51,6 +51,6 @@ function RecipesList({ingredientlist}){
             {meals}
         </div>
         
-    // )
+     )
 }
 export default RecipesList;
