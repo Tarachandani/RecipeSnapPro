@@ -7,7 +7,7 @@ function ListofThings(){
     const [term, setTerm] = useState('');
     const [dummyTerm, setDummyTerm] = useState('');
     const handleChange=(event)=>{
-        console.log(event.target.value);
+        //console.log(event.target.value);
         setDummyTerm(event.target.value);
     }
     const handleSubmit=(event)=>{
