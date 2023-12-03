@@ -8,6 +8,7 @@ import torch.nn as nn
 from theseus.utilities.loading import load_state_dict
 
 from theseus.utilities.loggers.observer import LoggerObserver
+import cv2
 
 LOGGER = LoggerObserver.getLogger("main")
 
