@@ -21,12 +21,12 @@ function RecipesList({ingredientlist}){
     }
 
     
-    return(
-        <div>
-            <button onClick={GetMealList}>hello</button>
-            {meals}
-        </div>
+    // return(
+    //     <div>
+    //         <button onClick={GetMealList}>hello</button>
+    //         {meals}
+    //     </div>
         
-    )
+    // )
 }
 export default RecipesList;

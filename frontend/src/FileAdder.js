@@ -27,12 +27,15 @@ function FileAdder(){ //added functionality for more use cases
     }
 
     return(
-        <div style={{backgroundColor: '#74c7ed', display: 'flex', padding: 20, alignItems:'center'}}>
+        /*<div style={{backgroundColor: '#74c7ed', display: 'flex', padding: 20, alignItems:'center'}}>*/
+        <div>
             <br></br>
             <form id="uploadForm" onSubmit={handleSubmit} >
-                <input id="myFiles" type="file" accept="image/*" ></input>
+                <input className="hide_file" id="myFiles" type="file" accept="image/*" ></input>
+                <button className="button-85">Choose File</button>
                 <br></br>
-                <button className="button-27">Submit!</button>
+                <br></br>
+                <button className="button-85">Submit!</button>
                 {describe}
                 <RecipesList ingredientlist={describe}></RecipesList>
             </form>
