@@ -1,7 +1,7 @@
 import FileAdder from "./FileAdder";
 import FoodImage from './images/imageoffood.jpeg';
 import ListofThings from "./ListofThings";
-
+import RecipesList from "./RecipesList";
 function App(){ //Takes care of FileAdder
     return(
         <div style={{backgroundColor: 'powderblue'}}>
@@ -11,6 +11,7 @@ function App(){ //Takes care of FileAdder
             <br></br>
             <text><text>Please lay out your ingredients (like shown above) and add your image:</text></text>
             <FileAdder ></FileAdder>
+            <RecipesList></RecipesList>
             <ListofThings></ListofThings>
         </div>
     )

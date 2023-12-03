@@ -1,5 +1,7 @@
 import {useState} from 'react';
 import CardImage from './CardImage';
+import './style/styles.css'
+
 function ListofThings(){
     const [clicked, setClicked] = useState(false);
     const [term, setTerm] = useState('');
@@ -18,8 +20,8 @@ function ListofThings(){
         <div>  
             <h1>Generate Recipe:</h1>
             <form onSubmit={handleSubmit}>
-                <input onChange={handleChange}></input>
-                <button onClick={handleSubmit}>Generate</button>
+                <input className="rounded" onChange={handleChange}></input>
+                <button className="button-27" onClick={handleSubmit}>Generate</button>
             </form>
             {answertoparam}
         </div>
