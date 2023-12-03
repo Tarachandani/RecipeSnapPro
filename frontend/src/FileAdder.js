@@ -1,6 +1,7 @@
 import {useState} from 'react';
 import axios from 'axios';
 import RecipesList from './RecipesList';
+import './styles.css';
 function FileAdder(){ //added functionality for more use cases 
     const [describe, setDescribe] = useState('');
     const [nextlist, setNextList] = useState('');
@@ -37,33 +38,11 @@ function FileAdder(){ //added functionality for more use cases
         <div>
             <br></br>
             <form id="uploadForm" onSubmit={handleSubmit} >
-                <input className="hide_file" id="myFiles" type="file" accept="image/*" ></input>
-                <button >Choose File</button>
+            <input id="myFiles" type="file" accept="image/*" style={{ display: 'none' }} />
+            <label htmlFor="myFiles" className="button-85">Choose File</label>
                 <br></br>
                 <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <button onSubmit={handleSubmit}>Submit!</button>
+                <button className = "button-85" onSubmit={handleSubmit}>Submit!</button>
                 {describe}
             </form>
         <div>
