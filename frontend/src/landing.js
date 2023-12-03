@@ -1,5 +1,6 @@
 import React from 'react';
-
+import FileAdder from "./FileAdder";
+import ListofThings from "./ListofThings";
 const LandingPage = () => {
     // Define your inline styles here
     const pageStyles = {
@@ -42,6 +43,10 @@ const LandingPage = () => {
             <button style={buttonStyles} onClick={() => alert('Going to camera!')}>
                 Camera
             </button>
+            <br></br>
+            <text><text>Please lay out your ingredients (like shown above) and add your image:</text></text>
+            <FileAdder ></FileAdder>
+            <ListofThings></ListofThings>
         </div>
     );
 };
