@@ -1,0 +1,329 @@
+.rounded {
+  width: 550px;
+  height: 40px;
+  font-size: 1.8rem;
+  background: var(--tenne-tawny);
+  color: black;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  transition: all 0.4s linear;
+  -webkit-transition: all 0.4s linear;
+  -moz-transition: all 0.4s linear;
+  -ms-transition: all 0.4s linear;
+  -o-transition: all 0.4s linear;
+  border-color: black;
+
+  /* Center the element horizontally */
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+/* CSS */
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Adjust this based on your layout */
+}
+
+.button-27 {
+  appearance: none;
+  background-color: #000000;
+  border: 1px solid #1a1a1a;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 5px;
+  min-height: 50px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  will-change: transform;
+  margin: auto; /* Center the button horizontally */
+  display: block; /* Ensure it takes up the full width */
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.button-27:disabled {
+  pointer-events: none;
+}
+
+.button-27:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.button-27:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+.hide_file {
+  position: absolute;
+  z-index: 1000;
+  opacity: 0;
+  cursor: pointer;
+  right: 0;
+  top: 0;
+  height: 100%;
+  font-size: 24px;
+  width: 100%;
+}
+
+/* */
+
+/* CSS */
+.button-87 {
+  margin: 10px;
+  padding: 15px 30px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 10px;
+  display: block;
+  border: 0px;
+  font-weight: 700;
+  box-shadow: 0px 0px 14px -7px #f09819;
+  background-image: linear-gradient(
+    45deg,
+    #ff512f 0%,
+    #f09819 51%,
+    #ff512f 100%
+  );
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.button-87:hover {
+  background-position: right center;
+  /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.button-87:active {
+  transform: scale(0.95);
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* <!-- HTML !-->
+<button class="button-85" role="button">Button 85</button> */
+
+/* CSS */
+.button-85 {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  text-align: center;
+  margin: auto; /* Center the button horizontally */
+  display: block; /* Ensure it takes up the full width */
+}
+input[type="file"] {
+  display: none;
+}
+
+label[for="myFiles"] {
+  display: grid; /* Keep the grid layout */
+  grid-auto-flow: column;
+  grid-gap: 2em;
+  justify-items: center;
+  align-content: center;
+  color: #edebec;
+  border: 0.2em solid #e91e63;
+  background: hsl(0 0 0/0);
+  padding: 0.6em 2em; /* Match the padding of .button-85 */
+  border-radius: 10px; /* Match border-radius */
+  transition: 1s;
+  cursor: pointer;
+  margin: auto; /* Center the label horizontally */
+  display: block; /* Ensure it takes up the full width */
+  width: 100px; /* Reasonable width */
+  height: 20px; /* Reasonable height */
+  /* Add width and height if needed, otherwise remove these */
+  /* width: ...; */
+  /* height: ...; */
+}
+
+label[for="myFiles"]:hover,
+label[for="myFiles"]:focus,
+label[for="myFiles"]:active {
+  background: #1ecee9;
+  color: #fff;
+}
+
+.button-86 {
+  font-size: 1.2rem; /* Larger font size */
+  padding: 15px 30px;
+  padding-top: 30px;
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  text-align: center;
+  margin: 20px auto; /* Center the button horizontally */
+  display: block; /* Ensure it takes up the full width */
+}
+
+.button-85:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+  text-align: center;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.button-85:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+  text-align: center;
+}
+
+h1 {
+  position: relative;
+  font-size: 2em;
+  letter-spacing: 10px;
+  font-family: roberto;
+  display: table;
+  margin: 40px auto;
+  cursor: pointer;
+  transition: 0.6s;
+  text-align: center;
+}
+h1:before,
+h1:after {
+  content: attr(data-text);
+  transition: 0.6s;
+}
+h1:before {
+  left: 0;
+  top: 0;
+  position: absolute;
+  z-index: -1;
+  text-shadow: 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px,
+    0px 0px, 0px 0px, 0px 0px;
+  -webkit-mask: repeating-linear-gradient(
+    45deg,
+    transparent 0 3px,
+    rgba(0, 0, 0, 0.5) 0 6px
+  );
+  mask: repeating-linear-gradient(
+    45deg,
+    transparent 0 3px,
+    rgba(0, 0, 0, 0.5) 0 6px
+  );
+}
+h1:hover {
+  transform: translate(-10px, -10px);
+}
+h1:hover:before {
+  text-shadow: 1px 1px, 2px 2px, 3px 3px, 4px 4px, 5px 5px, 6px 6px, 7px 7px,
+    8px 8px, 9px 9px, 10px 10px;
+}
+
+body {
+  background: rgb(192, 237, 255);
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}

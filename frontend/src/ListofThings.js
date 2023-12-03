@@ -1,11 +1,13 @@
 import {useState} from 'react';
 import CardImage from './CardImage';
+import './style/styles.css'
+
 function ListofThings(){
     const [clicked, setClicked] = useState(false);
     const [term, setTerm] = useState('');
     const [dummyTerm, setDummyTerm] = useState('');
     const handleChange=(event)=>{
-        console.log(event.target.value);
+        //console.log(event.target.value);
         setDummyTerm(event.target.value);
     }
     const handleSubmit=(event)=>{
@@ -16,10 +18,10 @@ function ListofThings(){
     const answertoparam  = clicked ? <CardImage term={term}></CardImage> : <div></div>;
     return(
         <div>  
-            <h1>Generate Recipe:</h1>
+            <h1>Recipe Inspiration:</h1>
             <form onSubmit={handleSubmit}>
-                <input onChange={handleChange}></input>
-                <button onClick={handleSubmit}>Generate</button>
+                <input className="rounded" onChange={handleChange}></input>
+                <button className="button-27" onClick={handleSubmit}>Generate</button>
             </form>
             {answertoparam}
         </div>
