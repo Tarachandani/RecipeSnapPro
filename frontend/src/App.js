@@ -7,9 +7,15 @@ function App(){ //Takes care of FileAdder
         <div style={{backgroundColor: 'powderblue'}}>
             
             <h1>AI Recipe App</h1>
-            <img src={FoodImage} alt="food on table"></img>
+            <img class = "center" src={FoodImage} alt="food on table"></img>
             <br></br>
-            <text><text>Please lay out your ingredients (like shown above) and add your image:</text></text>
+            <div class="center">
+                <h1 data-text = "Please lay out your ingredients (like shown above) and add your image:">
+                 
+                </h1>
+                
+            </div>
+            
             <FileAdder ></FileAdder>
             <ListofThings></ListofThings>
         </div>

@@ -46,12 +46,11 @@ function RecipesList({ingredientlist}){
 
     }
 
-    
     return(
         <div>
             {meals}
         </div>
         
-    )
+    // )
 }
 export default RecipesList;
