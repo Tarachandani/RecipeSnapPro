@@ -17,7 +17,6 @@ function App(){ //Takes care of FileAdder
             </div>
             
             <FileAdder ></FileAdder>
-            <RecipesList></RecipesList>
             <ListofThings></ListofThings>
         </div>
     )

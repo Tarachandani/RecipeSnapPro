@@ -3,6 +3,7 @@ import axios from 'axios';
 import RecipesList from './RecipesList';
 function FileAdder(){ //added functionality for more use cases 
     const [describe, setDescribe] = useState('');
+    const [nextlist, setNextList] = useState('');
     const sendFiles = async ()=>{
         const myFiles = document.getElementById('myFiles').files;
         const formData = new FormData();
@@ -10,7 +11,7 @@ function FileAdder(){ //added functionality for more use cases
             formData.append(myFiles.item(key).name, myFiles.item(key))
         })
         const res = await axios.post('http://localhost:5004/fileupload', formData);
-        console.log(res);
+        //console.log(res);
         const jsonStringWithDoubleQuotes = res.data.replace(/'/g, '"');
         const obj= JSON.parse(jsonStringWithDoubleQuotes);
 
@@ -19,11 +20,16 @@ function FileAdder(){ //added functionality for more use cases
         });
 
         setDescribe(diff);
+        
+        //console.log(diff);
+        setNextList(<RecipesList ingredientlist={diff}></RecipesList>);
     }
 
     const handleSubmit = (event)=>{
         event.preventDefault();
         sendFiles();
+
+        
     }
 
     return(
@@ -37,8 +43,11 @@ function FileAdder(){ //added functionality for more use cases
                 <br></br>
                 <button className="button-85">Submit!</button>
                 {describe}
-                <RecipesList ingredientlist={describe}></RecipesList>
             </form>
+        <div>
+         {nextlist}
+        </div>
+
         </div>
     )
 }
