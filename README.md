@@ -21,8 +21,11 @@ ADD THE DIAGRAM IMAGE HERE!!!!!!!
 
 # Developers:
 Ayush Tarachandani: Worked on frontend development and developed backend node.js file system functionality
+
 Rishabh Ranganathan: Developed the backend server's functionality and worked on connecting the frontend and the backend through axios requests
+
 Pranav Pullabhotla: Developed AWS integration and worked on the image inspiration API connection
+
 Joshus Neela: Main Frontend Developer, worked primarily on color schemes and UI
 
 
