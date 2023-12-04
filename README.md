@@ -5,6 +5,11 @@
 
 Our project is a Recipe Generator that generates different recipes for users based on the ingredients they provide to our application. Users input an image of their ingredients to our application, and the application outputs recipes that correspond to those specific ingredients.
 
+![second](https://github.com/CS222-UIUC-FA23/group-project-team85/assets/123044514/3cf5004a-1c53-4770-b0ff-240dca163295)
+
+![WhatsApp Image 2023-12-04 at 11 13 02 AM](https://github.com/CS222-UIUC-FA23/group-project-team85/assets/123044514/25f2c56c-a9c3-4fac-80ec-8b17b0ff3242)
+
+
 Here is the overall project structure:
 
 A user interacts with the frontend of our project, which is written in React.js. A user can choose a file on their device and input an image to the application. This process involves the use of middleware and the Node.js file system module to take the inputted image and send it to the running backend server. The running backend server then takes the image and uploads the image to an S3 bucket in AWS. After uploading the image to an AWS S3 bucket, the next step is calling the API we set up through AWS API Gateway. We are able to pass in the details of the location of the image in S3, and the API gateway will take this information and call an AWS Lambda function. The Lambda function will call a service called AWS Rekognition, which is a machine learning software in AWS that is used to detect images and outputs text that describes the image. We then take this text which describes the image and we send it back to the frontend. This text will give us the names of the ingredients that Rekognition has detected in the image. The frontend uses this to call the Recipe API with all the detected ingredients, and the recipe API sends back a response with all the recipes corresponding to those ingredients. The recipes are then listed.
