@@ -3,17 +3,25 @@ import AllRecipeCards from "./AllRecipeCards";
 import { useEffect } from "react";
 function RecipesList({ingredientlist}){
 
-    useEffect(()=>{
-        GetMealList();
-    },[]);
+    
     
     //console.log(ingredientlist);
-    const [ingredients, setIngredients]= useState('');
+    //const [ingredientlistState, setIngredients]= useState('');
     const [meals, setMeals] = useState([]);
 
-    const GetMealList=async ()=>{
-        
+    useEffect(()=>{
+        setMeals('');
+        // console.log("SET THE THING")
+        // console.log(meals);
+        GetMealList();
+    },[ingredientlist]);
 
+    const GetMealList=async ()=>{
+        console.log("TOP OF FUNCTION")
+        console.log(meals);
+
+        console.log(ingredientlist);
+        //console.log("DJFKLSDJFLSJD")
         ingredientlist.map((ingredient, index)=>{
             console.log(ingredient);
             
@@ -31,9 +39,10 @@ function RecipesList({ingredientlist}){
                         //console.log(meal.strMeal);
                         return <AllRecipeCards mealName={meal.strMeal} mealImage={meal.strMealThumb} link={meal.strMealThumb} id={meal.idMeal}></AllRecipeCards>
                     });
-                    console.log(meals);
-                    setMeals([...meals, ...newone])
-                    console.log(meals);
+                    //console.log("KJEFKLJSKLFJLSK:DJFKLSDJFDS");
+                    //setMeals([...meals, ...newone])
+                    setMeals(newone);
+                    //console.log(meals);
                 }
                 
             })
