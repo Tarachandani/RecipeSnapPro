@@ -1,6 +1,8 @@
 import { useState } from "react";
 import AllRecipeCards from "./AllRecipeCards";
 import { useEffect } from "react";
+import './styles.css';
+
 function RecipesList({ingredientlist}){
 
     
@@ -19,7 +21,16 @@ function RecipesList({ingredientlist}){
     const GetMealList=async ()=>{
         console.log("TOP OF FUNCTION")
         console.log(meals);
-
+        const divStyle = {
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            height: '10vh',
+            marginTop: '20px',
+            color: 'red',     
+            fontWeight: 'bold', 
+            fontSize: '24px',
+          };
         console.log(ingredientlist);
         //console.log("DJFKLSDJFLSJD")
         ingredientlist.map((ingredient, index)=>{
@@ -31,19 +42,21 @@ function RecipesList({ingredientlist}){
                 // (meal)=>{
                 //     return <AllRecipeCards meal={meal.length}></AllRecipeCards>
                 // }
+                var newone='';
                 if(data.meals===null){
-
+                    newone=<div style={divStyle}>There are no results for the given ingredients!!</div>
                 }else{
                     console.log(data.meals);
-                    const newone= data.meals.map((meal)=>{
+                    newone= data.meals.map((meal)=>{
                         //console.log(meal.strMeal);
                         return <AllRecipeCards mealName={meal.strMeal} mealImage={meal.strMealThumb} link={meal.strMealThumb} id={meal.idMeal}></AllRecipeCards>
                     });
                     //console.log("KJEFKLJSKLFJLSK:DJFKLSDJFDS");
                     //setMeals([...meals, ...newone])
-                    setMeals(newone);
                     //console.log(meals);
                 }
+                setMeals(newone);
+
                 
             })
             
