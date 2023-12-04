@@ -1,7 +1,7 @@
 # group-project-readme
 
 
-*Introduction*
+#Introduction
 
 AI Integration:
 Leverages advanced computer vision to analyze user-captured fridge photos, employing image recognition for precise food identification.
