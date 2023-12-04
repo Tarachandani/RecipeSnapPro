@@ -25,9 +25,14 @@ The bottom part of the application, which is the inspiration section, takes the 
 
 This is a base-level architecture of the application. The user will give some input and we will then take the file and send it to the backend, which will upload it to AWS S3. Then we will call API Gateway, which will call AWS Lambda, which will call AWS Rekognition, and which will return results. We take these results and call the recipe API, and the output of different recipes is then displayed on the webpage. Here is a closer look at the AWS architecture as well:
 
+<img width="1244" alt="Screenshot 2023-12-04 at 4 19 04 PM" src="https://github.com/CS222-UIUC-FA23/group-project-team85/assets/123044514/3df1d193-f462-4898-bd61-149634b0c138">
+
+This is the AWS S3 bucket, where objects are uploaded to upon user file inputs.
+
+
 ![WhatsApp Image 2023-12-03 at 1 59 55 PM](https://github.com/CS222-UIUC-FA23/group-project-team85/assets/123044514/a6ab9bcd-51c8-4675-b0c2-98a2d8635f89)
 
-Here is a diagram depicting the request being sent to the API, the communication with AWS lambda and rekognition, and the eventual response sent back from the API.
+This is a diagram depicting the request being sent to the API, the communication with AWS lambda and rekognition, and the eventual response sent back from the API.
 
 
 # Developers:
