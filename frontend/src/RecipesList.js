@@ -33,20 +33,22 @@ function RecipesList({ingredientlist}){
           };
         console.log(ingredientlist);
         //console.log("DJFKLSDJFLSJD")
-        ingredientlist.map((ingredient, index)=>{
+        var newone=null;
+
+        await ingredientlist.map((ingredient, index)=>{
             console.log(ingredient);
-            
             fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${ingredientlist[index].props.children}`)
             .then(response => response.json())
             .then((data)=>{
                 // (meal)=>{
                 //     return <AllRecipeCards meal={meal.length}></AllRecipeCards>
                 // }
-                var newone='';
+                
                 if(data.meals===null){
-                    newone=<div style={divStyle}>There are no results for the given ingredients!!</div>
+
                 }else{
                     console.log(data.meals);
+                    //console.log("HEREHERE")
                     newone= data.meals.map((meal)=>{
                         //console.log(meal.strMeal);
                         return <AllRecipeCards mealName={meal.strMeal} mealImage={meal.strMealThumb} link={meal.strMealThumb} id={meal.idMeal}></AllRecipeCards>
@@ -55,9 +57,17 @@ function RecipesList({ingredientlist}){
                     //setMeals([...meals, ...newone])
                     //console.log(meals);
                 }
-                setMeals(newone);
-
                 
+                
+            }).then(()=>{
+                console.log(newone);
+                console.log("DOWN HERE");
+                if(newone===null){
+                    newone=<div style={divStyle}>There are no results for the given ingredients!!</div>
+                }
+                
+                setMeals(newone);
+        
             })
             
             
