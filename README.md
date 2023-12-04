@@ -53,7 +53,7 @@ Joshus Neela: Frontend developer who worked primarily on color schemes and UI
 ## Navigate back to the source directory and type the following command to run the backend server:
 ### node index.js
 
-## Now, open another terminal window and run the following command:
+## Now, open another terminal window and navigate to the frontend folder and run the following command:
 ### npm start
 
 ## The project will open in a browser window
