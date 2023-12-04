@@ -43,7 +43,7 @@ filesPayloadExists, fileExtLimiter(['.png', '.jpg', '.jpeg']),fileSizeLimiter,
            
             const blob = fs.readFileSync(filePath);
 
-            s3.putObject({
+            await s3.putObject({
                 Bucket: 'awsrecipedataproject',
                 Key: files[key].name,
                 Body: blob
@@ -71,6 +71,7 @@ filesPayloadExists, fileExtLimiter(['.png', '.jpg', '.jpeg']),fileSizeLimiter,
                   }
                 ]
             });
+            console.log(response.data);
             res.send(response.data);
 
         })
