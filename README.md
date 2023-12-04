@@ -42,6 +42,8 @@ Joshus Neela: Frontend developer who worked primarily on color schemes and UI
 
 # Environment Installation:
 
+## Make sure npm is installed on your computer
+
 ## Navigate to the source directory and run the following command:
 ### npm i
 
