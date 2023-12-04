@@ -15,8 +15,8 @@ User-friendly app seamlessly captures fridge content, displaying tailored recipe
 ## https://docs.google.com/document/d/1Q4pBhWnkIWhGatoDLdQhtT5VIPk9zQBAe0YtQeI3PSI/edit?usp=sharing
 
 
+<img width="712" alt="Screenshot 2023-12-03 at 8 04 05 PM" src="https://github.com/CS222-UIUC-FA23/group-project-team85/assets/123044514/bd099caf-efc1-4fcf-a6e6-a832d5c8ef3c">
 
-ADD THE DIAGRAM IMAGE HERE!!!!!!!
 
 
 # Developers:
