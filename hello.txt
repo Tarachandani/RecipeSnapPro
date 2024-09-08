@@ -1,6 +1,0 @@
-hello
-hello there.
-This app is going to revolutionize the homemade food industry. this will help many college students like myself cook better and cook at home.
-
-Add AWS and PySpark integration --> this is a must, Saurav Kumar please imporve
-OpenCV strapped to a AWS ec2 instance leveragaing ETL AI/ML pipeline housing PyTesseract data lake
